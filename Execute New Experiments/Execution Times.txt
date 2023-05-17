@@ -1,0 +1,31 @@
+Rocket - 76842.03629493713 , 0.89 days 
+
+_C_I_F_ - 196034.55922698975 , 2.3 days
+
+Dr_C_I_F - 287116.98415613174, 3.3 days
+
+HIVECOTE2 - 521945.46582722664 (I think) , 6 days
+
+Inception Time - Had an error that idk 
+
+The error : 
+
+Traceback (most recent call last):
+  File "/export/sphere/ebirah/ko20929/RBD_using_custom_package/Execute New Experiments/run_new_models_1.py", line 56, in <module>
+    run_expts.run_mv_tsc(X_expt ,y_expt , groups_expt, clf, save_path, random_states = [13 , 37])
+  File "/export/sphere/ebirah/ko20929/eeg_package/src/run_expts.py", line 228, in run_mv_tsc
+    acc , mean, y_pred_arrays , y_true_arrays = run_clf_with_CV(X, y , groups , clf , rand_state = rand_state)
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/export/sphere/ebirah/ko20929/eeg_package/src/run_expts.py", line 150, in run_clf_with_CV
+    y_preds = clf.predict(X_test)
+              ^^^^^^^^^^^^^^^^^^^
+  File "/export/sphere/ebirah/ko20929/miniconda3/envs/sktime_latest/lib/python3.11/site-packages/sktime/classification/base.py", line 241, in predict
+    return self._predict(X)
+           ^^^^^^^^^^^^^^^^
+  File "/export/sphere/ebirah/ko20929/miniconda3/envs/sktime_latest/lib/python3.11/site-packages/sktime/classification/deep_learning/base.py", line 86, in _predict
+    [
+  File "/export/sphere/ebirah/ko20929/miniconda3/envs/sktime_latest/lib/python3.11/site-packages/sktime/classification/deep_learning/base.py", line 87, in <listcomp>
+    self.classes_[int(rng.choice(np.flatnonzero(prob == prob.max())))]
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                      
+                      
