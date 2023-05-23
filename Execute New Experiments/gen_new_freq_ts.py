@@ -26,8 +26,6 @@ channels = constants.channel_list
 
 
 
-
-
 #1. select the appropriate paths and supplementary information - store in lists
 
 # for data_type in ['Wake', 'N1', 'N2', 'N3','REM']

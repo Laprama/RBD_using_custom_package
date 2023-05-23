@@ -1,0 +1,2 @@
+Reults_1 - for binary experiments, includes HIVECOTE without edited CV code 
+Results_2 - for all experiment types 1 to 4 , HIVECOTE excluded to speed up experiment execution
