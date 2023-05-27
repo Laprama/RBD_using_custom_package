@@ -52,7 +52,7 @@ X_expt ,y_expt , groups_expt, expt_info = run_expts.generate_expt_x_y_groups(X ,
 
 
 #3.Use the correct function to run the experiment, give it the correct random seeds and correct save path for the results
-save_path = '/user/home/ko20929/RBD_using_custom_package/Data/Execute New Experiments/Results/Results_3/'
+save_path = '/user/home/ko20929/RBD_using_custom_package/Execute New Experiments/Results/Results_3/'
 save_path = save_path + 'expt_' + str(expt_num) + '_' + data_type + '_' 
 clf = {'ROCKET' : RocketClassifier(use_multivariate='yes') }
 
