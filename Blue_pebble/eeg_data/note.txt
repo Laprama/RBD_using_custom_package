@@ -1,0 +1,2 @@
+This folder contains dataframes which store all of the raw REM, N1 , N2 , N3 , Wake together in one dataframe 
+Those dataframes are then used to generate the Catch 22 features
