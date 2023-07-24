@@ -89,7 +89,7 @@ for data_type in ['REM', 'N1', 'N2', 'N3', 'Wake']:
 
     # Save these main pieces of data
     folder = 'eeg_data/'
-    eeg_data_df.to_hdf(folder + data_type + '_c_22_feautures.h5' , key = 'df', mode = 'w')
+    eeg_data_df.to_parquet(folder + data_type + '_c_22_feautures.parquet')
     groups.to_hdf(folder + data_type + '_c_22_groups.h5' , key = 's', mode = 'w')
     class_list.to_hdf(folder + data_type + '_c_22_class_list.h5' , key = 's', mode = 'w')
     y.to_hdf(folder + data_type + '_c_22_y.h5' , key = 's', mode = 'w')
