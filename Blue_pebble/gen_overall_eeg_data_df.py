@@ -89,10 +89,7 @@ for data_type in ['REM', 'N1', 'N2', 'N3', 'Wake']:
 
     # Save these main pieces of data
     folder = 'eeg_data/'
-
-    # Save the eeg_data_df in two dataframes because it's too large to save as one
-    eeg_data_df.iloc[:35 , :].to_hdf(folder + data_type + '_eeg_data_1.h5' , key = 'df', mode = 'w')
-    eeg_data_df.iloc[35: , :].to_hdf(folder + data_type + '_eeg_data_2.h5' , key = 'df', mode = 'w')
+    joblib.dump(eeg_data_df, folder + data_type + '_eeg_data_df.pkl')
     groups.to_hdf(folder + data_type + '_groups.h5' , key = 's', mode = 'w')
     class_list.to_hdf(folder + data_type + '_class_list.h5' , key = 's', mode = 'w')
     y.to_hdf(folder + data_type + '_y.h5' , key = 's', mode = 'w')
