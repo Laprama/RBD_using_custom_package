@@ -89,10 +89,13 @@ for data_type in ['REM', 'N1', 'N2', 'N3', 'Wake']:
 
     # Save these main pieces of data
     folder = 'eeg_data/'
-    eeg_data_df.to_parquet(folder + data_type + '_c_22_feautures.parquet')
-    groups.to_hdf(folder + data_type + '_c_22_groups.h5' , key = 's', mode = 'w')
-    class_list.to_hdf(folder + data_type + '_c_22_class_list.h5' , key = 's', mode = 'w')
-    y.to_hdf(folder + data_type + '_c_22_y.h5' , key = 's', mode = 'w')
+
+    # Save the eeg_data_df in two dataframes because it's too large to save as one
+    eeg_data_df.iloc[:35 , :].to_hdf(folder + data_type + '_eeg_data_1.h5' , key = 'df', mode = 'w')
+    eeg_data_df.iloc[35: , :].to_hdf(folder + data_type + '_eeg_data_2.h5' , key = 'df', mode = 'w')
+    groups.to_hdf(folder + data_type + '_groups.h5' , key = 's', mode = 'w')
+    class_list.to_hdf(folder + data_type + '_class_list.h5' , key = 's', mode = 'w')
+    y.to_hdf(folder + data_type + '_y.h5' , key = 's', mode = 'w')
 
     t2 = time.time()
     time_taken = t2 - t1
