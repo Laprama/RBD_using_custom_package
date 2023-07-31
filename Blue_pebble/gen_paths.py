@@ -21,15 +21,14 @@ import format_eeg_data
 import constants
 import eeg_stat_ts
 
-#Let me see as many results as I want to see
-pd.set_option('display.max_rows', 500)
-pd.set_option('display.max_columns', 500)
 
 t0 = time.time()
 
-data_type_num = int(sys.argv[1])
+#Lets trouble shoot with N1  as it only takes 82 seconds to create that dataframe
+# for data_type in ['REM', 'N1', 'N2', 'N3', 'Wake']:
 
-for data_type in [['REM'], ['N1'], ['N2'], ['N3'], ['Wake']][data_type_num]:
+for data_type in ['Wake', 'N2', 'REM', 'N1', 'N3', ]:
+    
     t1 = time.time()
 
     channels = constants.channel_list
@@ -45,6 +44,7 @@ for data_type in [['REM'], ['N1'], ['N2'], ['N3'], ['Wake']][data_type_num]:
             s_night_list.append(night)
             s_sleep_type.append(data_type)
             s_p_id.append(p_id)
+            
 
     #2. Load corresponding data into dataframes , store in dataframe list
     df_list = []
@@ -70,32 +70,20 @@ for data_type in [['REM'], ['N1'], ['N2'], ['N3'], ['Wake']][data_type_num]:
         s_night_list.pop(path_index)
         s_sleep_type.pop(path_index)
         s_p_id.pop(path_index)
+       
+    #Save the list of data paths to a .pkl file 
+    paths_dict = {}
+    paths_dict['selected_paths'] = selected_paths
+    paths_dict['s_class_list'] = s_class_list
+    paths_dict['s_night_list'] = s_night_list
+    paths_dict['s_sleep_type'] = s_sleep_type
+    paths_dict['s_p_id'] = s_p_id
 
-    #Now we have the 57 channel EEG data in df's in df_list and corresponding supplementary information in the lists 
-    #Selected_paths , s_class_list , s_night_list , s_sleep_type , s_p_id
+    joblib.dump(paths_dict, data_type + '_paths.pkl')
 
-    #3. Load all of the data into a single dataframe with each cell containing a time series 
-    ts_row_list = []
 
-    for df in df_list:
-        row = {}
-        for col in df.columns:
-            row[col] = df[col]
-        ts_row_list.append(row)
-        
-    # All of the main pieces of data to save 
-    eeg_data_df = pd.DataFrame.from_records(ts_row_list)
-    groups = pd.Series(s_p_id)
-    class_list = pd.Series(s_class_list)
-    y = class_list.map({'HC': 0 , 'PD' : 1 , 'PD+RBD' : 2 , 'RBD' : 3})
 
-    # Save these main pieces of data
-    folder = 'eeg_data/'
-    joblib.dump(eeg_data_df, folder + data_type + '_eeg_data_df.pkl')
-    groups.to_hdf(folder + data_type + '_groups.h5' , key = 's', mode = 'w')
-    class_list.to_hdf(folder + data_type + '_class_list.h5' , key = 's', mode = 'w')
-    y.to_hdf(folder + data_type + '_y.h5' , key = 's', mode = 'w')
-
+    #Saving the data is taken out of the loop for investigation purposes
     t2 = time.time()
     time_taken = t2 - t1
 
