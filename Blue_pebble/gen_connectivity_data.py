@@ -27,7 +27,9 @@ import constants
 import numpy as np
 
 #Wake connectivity already generated G 
-for data_type in ['REM', 'N1', 'N2', 'N3']:
+# for data_type in ['REM', 'N1', 'N2', 'N3']:
+#Running this for N2 only
+for data_type in ['N2']:
     paths = joblib.load(data_type + '_paths.pkl')
 
     print('paths loaded ...')
