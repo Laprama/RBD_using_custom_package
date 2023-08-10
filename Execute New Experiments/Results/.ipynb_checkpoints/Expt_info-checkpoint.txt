@@ -1,0 +1,9 @@
+Results 1 and 2 are on original frequency data 
+
+Reults_1 - for binary experiments, includes HIVECOTE without edited CV code 
+Results_2 - for all experiment types 1 to 4 , HIVECOTE excluded to speed up experiment execution
+
+
+Results 3 - new 6 second freq data , Run with ROCKET , first for experiment types 1 and 2 to see if they are any good
+
+Results 4 - Baseline models, Random Forest - Decision Tree - SVM
