@@ -1,0 +1,15 @@
+These four files are global PLI plus single regional statistical features (Minimal BPW + Minimal Max Freq):
+'tuned_clfs_dicts_loaded.pkl'
+'tuned_results_dfs_loaded.pkl'
+'non_tuned_clfs_dicts_loaded.pkl'
+'non_tuned_results_dfs_loaded.pkl'
+
+
+These files are for regional baselines (means of the BPW + Max Freq TS's) : 
+'baseline_region_only_no_connectivity_tuned_clfs_dicts_loaded.pkl'
+'baseline_region_only_no_connectivity_tuned_results_dfs_loaded.pkl'
+
+
+These files are for regional statistical TS models that use efficient and Minimal TS features: 
+'region_only_no_connectivity_tuned_clfs_dicts_loaded.pkl'
+'region_only_no_connectivity_tuned_results_dfs_loaded.pkl'

@@ -1,0 +1,22 @@
+1.Find the notebooks and scripts that run: 
+    1.Connectivity Expts : http://localhost:8082/notebooks/Execute%20New%20Experiments/Connectivity/Connectivity_Expt_all_dtypes.ipynb
+    2.Baseline Expts : http://localhost:8082/notebooks/Execute%20New%20Experiments/Connectivity/view_combined_results/View_Connectivity_Combined_Results_Tables.ipynb
+
+    3.Connectivity + Regional Expts : http://localhost:8082/edit/Execute%20New%20Experiments/Connectivity/Connectivity_Combined_with_regional_freq_features_script.py
+
+
+
+2. Find :
+    Both can be found in this notebook: http://localhost:8082/notebooks/Execute%20New%20Experiments/Connectivity/view_combined_results/View_Connectivity_Combined_Results_Tables.ipynb
+
+    1. Where results for the above are saved
+
+    2. Notebooks on how to view results from the above 
+
+
+Test_Notebook : 
+I did regional + multi region max freq + bpw experiments
+Also I did code to calculate global mean Bpw and Max Freqs
+
+Test_Notebook_2 : 
+Continues work from Test_Notebook 1 but seperated it so it's easier to comprehend the results from Test_Notebook 1

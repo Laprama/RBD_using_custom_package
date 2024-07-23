@@ -1,0 +1,3 @@
+Going to test fitting hyperparameters especially on Random Forest 
+But also on DT and Ada B 
+Random Forest should be the best

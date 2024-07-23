@@ -4,3 +4,48 @@ Blue_pebble/eeg_data/N3_eeg_data_df.pkl
 Blue_pebble/eeg_data/REM_eeg_data_df.pkl
 Blue_pebble/eeg_data/Wake_eeg_data_df.pkl
 Blue_pebble/C_22_data/Archive/
+Blue_pebble/Connectivity/
+Execute New Experiments/Data/
+# Archived Old TS Fresh Raw EEG Data
+Execute New Experiments/TS_Fresh_Raw_EEG/Data/
+# I need to load these files into Blue Crystal they are the normalised dfs (and regional average spectrograms)
+Execute New Experiments/Deep Learning/Wake_normalised_dataframes.pkl
+Execute New Experiments/Deep Learning/N1_normalised_dataframes.pkl
+Execute New Experiments/Deep Learning/N2_normalised_dataframes.pkl
+Execute New Experiments/Deep Learning/N3_normalised_dataframes.pkl
+Execute New Experiments/Deep Learning/REM_normalised_dataframes.pkl
+Execute New Experiments/Deep Learning/sleep_type_regional_average_spectrograms.pkl
+# Some files in Band Search Algo are huge so I'm also going to ignore them then transfer them across to BC4 seperately
+Execute New Experiments/Frequency_Ratio_Analysis/Band Search Algo/Results/
+Execute New Experiments/Frequency_Ratio_Analysis/Multiple_PSDs_Per_Participant/
+Execute New Experiments/Frequency_Ratio_Analysis/PSD Plots/
+#The folder Execute New Experiments/Baseline_Extensions/, is huge due to results files and data 
+#Will need to ignore the largest files in there, will add them here
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/run_2_region_only_no_connectivity_tuned_clfs_dicts_loaded.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/region_only_no_connectivity_tuned_clfs_dicts_loaded.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/non_tuned_clfs_dicts_loaded.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/tuned_clfs_dicts_loaded.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/dual_region_tuned_results_dfs_loaded.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/tuned_results_dfs_loaded.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/region_only_no_connectivity_tuned_results_dfs_loaded.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/run_2_region_only_no_connectivity_tuned_results_dfs_loaded.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/data_dict_2_region_only.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/baseline_region_only_no_connectivity_tuned_clfs_dicts_loaded.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/explainability_analysis/baseline_region_only_no_connectivity_tuned_results_dfs_loaded.pkl
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/hyperparameter_tuning_results/
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/non_tuned_models_and_results/
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/tuned_models_and_results/
+Execute New Experiments/Baseline_Extensions/Fitting Hyperparam Test/tuned_region_only_models_and_results/
+Execute New Experiments/Baseline_Extensions/Gen_New_Features/generated_feats/
+#Connectivity results folders are ~ 100's MBs so will git ignore them
+Execute New Experiments/Connectivity/Connectivity_Results/Experiment_set_2/
+Execute New Experiments/Connectivity/Connectivity_Results/Experiment_set_3/
+Execute New Experiments/Connectivity/combined_results/
+Execute New Experiments/Connectivity/view_combined_results/
+#The.pkl files here take up ~ 100's MBs
+Execute New Experiments/Connectivity/view_combined_results/*.pkl
+# Ignore some large data files in this folder 
+Execute New Experiments/TS_Fresh_Raw_EEG/Data/
+# Ignore model folders created by Braindecode & MNE
+res_test/
+test_save_path/
