@@ -49,3 +49,14 @@ Execute New Experiments/TS_Fresh_Raw_EEG/Data/
 # Ignore model folders created by Braindecode & MNE
 res_test/
 test_save_path/
+
+#Ignore all of the png results files in deep learning results 'Folder 3'
+Execute New Experiments/Deep Learning/Results/Folder_3/*.png
+
+#Ignore the large.pkl files of normalised 20 channel dataframes
+Execute New Experiments/Deep Learning/Wake_20_channel_normalised_dataframes.pkl
+Execute New Experiments/Deep Learning/N1_20_channel_normalised_dataframes.pkl
+Execute New Experiments/Deep Learning/N2_14_channel_normalised_dataframes.pkl
+Execute New Experiments/Deep Learning/N2_20_channel_normalised_dataframes.pkl
+Execute New Experiments/Deep Learning/N3_20_channel_normalised_dataframes.pkl
+Execute New Experiments/Deep Learning/REM_20_channel_normalised_dataframes.pkl
